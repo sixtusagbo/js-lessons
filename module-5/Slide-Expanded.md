@@ -63,42 +63,136 @@ const person = { name: "Sarah", age: 26 };
 
 ---
 
-## Slide 4: Template Literals
+## Slide 4: String Concatenation
 
-**Title:** Modern String Formatting
+**Title:** Combining Text and Variables
 
 **What to Say:**
-"Here's a game-changer that makes working with text so much easier. The old way of combining text and variables was painful. You'd have to use plus signs everywhere and keep track of spaces and quotes. It looked like this: 'Hello ' + name + ', you are ' + age + ' years old!'
+"Before we learn the modern way of working with strings, let's understand the traditional approach - concatenation. Concatenation means joining strings together, and we do this with the plus operator.
 
-But JavaScript gave us template literals - a much cleaner way. Instead of regular quotes, we use backticks - that's the key above your tab key. Then, anywhere we want to insert a variable, we use dollar sign and curly braces.
+When you want to combine text with variables, you use the plus sign to join them. For example, 'Hello ' + name + '!' creates a greeting. Notice I had to include the space after 'Hello' and the exclamation mark - every piece needs to be explicitly added.
 
-Watch this magic happen. Instead of concatenating strings with plus signs, we can write natural sentences and just drop variables right where they belong. It's like fill-in-the-blanks for programmers.
+This works, but it gets messy quickly. Imagine creating a sentence with multiple variables: 'Hello ' + firstName + ' ' + lastName + ', you are ' + age + ' years old and live in ' + city + '.' See how many plus signs and spaces you need to track?
 
-And here's a bonus - template literals can span multiple lines. Try doing that with regular strings and you'll get an error. This is incredibly useful when you're building HTML or writing longer text."
+The problems with concatenation are: it's hard to read, easy to forget spaces, and you have to be careful with data types. If you try to concatenate a number, JavaScript will convert it to a string, which usually works but can be confusing.
+
+This is why JavaScript introduced a better way - template literals. Let me show you how much cleaner this can be."
 
 **Live Demo:**
 
 ```javascript
-const name = "Alex";
-const age = 28;
+const name = "Sarah";
+const age = 25;
+const city = "New York";
 
-// Old way - messy!
-const oldWay = "Hello " + name + ", you are " + age + " years old!";
+// Concatenation - the old way
+const greeting = "Hello " + name + ", you are " + age + " years old!";
+const fullMessage =
+  "Hello " + name + ", you are " + age + " years old and live in " + city + ".";
 
-// New way - clean!
-const newWay = `Hello ${name}, you are ${age} years old!`;
+console.log(greeting);
+console.log(fullMessage);
 
-// Multi-line example
-const message = `
-  Welcome ${name}!
-  Your account has been created.
-  You can now start using our service.
-`;
+// Notice how many + signs and spaces we need to track!
 ```
 
 ---
 
-## Slide 5: Functions & Control Flow
+## Slide 5: Template Literals
+
+**Title:** Modern String Formatting
+
+**What to Say:**
+"Now let me show you template literals - JavaScript's solution to the concatenation mess. Instead of using regular quotes and plus signs, we use backticks and a special syntax for variables.
+
+Template literals use backticks - that's the key above your tab key, not a regular quote. Inside the backticks, you can write normal text, and when you want to insert a variable, you use ${variableName}. The dollar sign and curly braces tell JavaScript 'put the value of this variable here.'
+
+Look how much cleaner this is! Instead of breaking up your sentence with quotes and plus signs, you write it naturally and just drop variables where they belong. It reads like a sentence with blanks to fill in.
+
+And here's a bonus feature - template literals can span multiple lines without any special characters. Try doing that with regular strings and you'll get an error. This is incredibly useful when you're building HTML or writing longer text.
+
+Template literals also handle data type conversion automatically. Numbers, booleans, even objects - they all get converted to strings seamlessly."
+
+**Live Demo:**
+
+```javascript
+const name = "Sarah";
+const age = 25;
+const city = "New York";
+
+// Template literals - the modern way
+const greeting = `Hello ${name}, you are ${age} years old!`;
+const fullMessage = `Hello ${name}, you are ${age} years old and live in ${city}.`;
+
+console.log(greeting);
+console.log(fullMessage);
+
+// Multi-line example
+const emailTemplate = `
+  Dear ${name},
+
+  Thank you for joining our service.
+  Your account has been created successfully.
+
+  Best regards,
+  The Team
+`;
+
+console.log(emailTemplate);
+```
+
+---
+
+## Slide 6: Operators
+
+**Title:** Working with Data
+
+**What to Say:**
+"Operators are the tools that let you work with data - perform calculations, make comparisons, and combine values. Think of them as the verbs of programming - they're what make things happen.
+
+Arithmetic operators are probably familiar from math class. Plus, minus, multiply, divide - they work exactly as you'd expect. The modulus operator (%) gives you the remainder after division, which is useful for things like checking if a number is even or odd.
+
+Assignment operators save you typing. Instead of writing 'score = score + 10', you can write 'score += 10'. It's shorthand that makes your code cleaner and shows your intent clearly.
+
+Comparison operators let your code make decisions. Triple equals (===) checks if two values are exactly the same. We use triple equals instead of double equals because it's more precise - it checks both value and type.
+
+Logical operators let you combine conditions. AND (&&) means both conditions must be true. OR (||) means at least one condition must be true. NOT (!) flips true to false and false to true.
+
+The ternary operator is like a compact if-else statement. It's perfect for simple decisions where you want to assign one of two values based on a condition."
+
+**Live Demo:**
+
+```javascript
+// Arithmetic operators
+let score = 100;
+let bonus = 25;
+let total = score + bonus; // 125
+let average = total / 2; // 62.5
+let remainder = total % 10; // 5
+
+// Assignment operators
+score += 50; // Same as: score = score + 50
+score *= 2; // Same as: score = score * 2
+
+// Comparison operators
+let isHighScore = score > 200; // true or false
+let isEqual = score === 300; // true or false
+
+// Logical operators
+let canPlay = score > 100 && age >= 18; // Both must be true
+let hasBonus = score > 500 || isVIP; // Either can be true
+let isNotBeginner = !isNewPlayer; // Flips the boolean
+
+// Ternary operator
+let message = score > 100 ? "Great job!" : "Keep trying!";
+let status = age >= 18 ? "adult" : "minor";
+
+console.log(`Score: ${score}, Message: ${message}, Status: ${status}`);
+```
+
+---
+
+## Slide 7: Functions & Control Flow
 
 **Title:** Functions & Control Flow (10 minutes)
 
@@ -141,7 +235,7 @@ for (let i = 1; i <= 5; i++) {
 
 ---
 
-## Slide 6: Project 1 Demo
+## Slide 8: Project 1 Demo
 
 **Title:** 🧮 Personal Info Calculator
 
@@ -165,7 +259,7 @@ As we build this, I want you to notice how each line of code has a purpose. We'r
 
 ---
 
-## Slide 7: Project 2 Demo
+## Slide 9: Project 2 Demo
 
 **Title:** 🎯 Simple Game Logic
 
@@ -189,7 +283,7 @@ What I love about this project is that it demonstrates debugging in action. We l
 
 ---
 
-## Slide 8: Key Teaching Points
+## Slide 10: Key Teaching Points
 
 **Title:** Important Concepts
 
@@ -212,7 +306,7 @@ Finally, interactive examples are how you really learn. Don't just watch me code
 
 ---
 
-## Slide 9: Common Mistakes
+## Slide 11: Common Mistakes
 
 **Title:** Watch Out For These!
 
@@ -237,7 +331,7 @@ Don't worry if these seem confusing now. We'll encounter each of these as we cod
 
 ---
 
-## Slide 10: Let's Code!
+## Slide 12: Let's Code!
 
 **Title:** Hands-On Time
 
@@ -262,7 +356,7 @@ Remember, programming is not about memorizing syntax. It's about understanding c
 
 ---
 
-## Slide 11: Wrap Up
+## Slide 13: Wrap Up
 
 **Title:** Great Job!
 

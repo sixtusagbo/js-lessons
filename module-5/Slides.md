@@ -1,8 +1,10 @@
 # Module 5: JavaScript Fundamentals - Slides
 
 ## Slide 1: Welcome
+
 **Title:** JavaScript Fundamentals
 **Content:**
+
 - Welcome to JavaScript Fundamentals
 - The programming language of the web
 - Today: Variables, functions, data types, and control flow
@@ -11,8 +13,10 @@
 ---
 
 ## Slide 2: What We'll Learn
+
 **Title:** Learning Objectives
 **Content:**
+
 - ✅ Declare and use variables with different data types
 - ✅ Write and call functions
 - ✅ Use conditional statements and loops
@@ -21,8 +25,10 @@
 ---
 
 ## Slide 3: Variables & Data Types
+
 **Title:** Variables & Data Types (5 minutes)
 **Content:**
+
 - `let`, `const`, and `var` - when to use each
 - **Numbers:** `42`, `3.14`
 - **Strings:** `"Hello World"`, `'JavaScript'`
@@ -32,20 +38,51 @@
 
 ---
 
-## Slide 4: Template Literals
+## Slide 4: String Concatenation
+
+**Title:** Combining Text and Variables
+**Content:**
+
+- **Concatenation:** Joining strings together
+- Use the `+` operator: `"Hello " + name + "!"`
+- Must include spaces manually: `"Age: " + age + " years"`
+- Can be messy with multiple variables
+- **Then came Template Literals...**
+
+---
+
+## Slide 5: Template Literals
+
 **Title:** Modern String Formatting
 **Content:**
-- Old way: `"Hello " + name + "!"`
-- New way: `` `Hello ${name}!` ``
-- Use backticks (`) instead of quotes
-- Embed variables with `${variable}`
+
+- **Problem:** Concatenation gets messy with `+` signs
+- **Solution:** Template literals with backticks
+- Old way: `"Hello " + name + ", you are " + age + "!"`
+- New way: `` `Hello ${name}, you are ${age}!` ``
+- Use backticks (`) and `${variable}` syntax
 - Multi-line strings supported
 
 ---
 
-## Slide 5: Functions & Control Flow
+## Slide 6: Operators
+
+**Title:** Working with Data
+**Content:**
+
+- **Arithmetic:** `+`, `-`, `*`, `/`, `%` (remainder)
+- **Assignment:** `=`, `+=`, `-=`, `*=`, `/=`
+- **Comparison:** `===`, `!==`, `>`, `<`, `>=`, `<=`
+- **Logical:** `&&` (and), `||` (or), `!` (not)
+- **Ternary:** `condition ? valueIfTrue : valueIfFalse`
+
+---
+
+## Slide 7: Functions & Control Flow
+
 **Title:** Functions & Control Flow (10 minutes)
 **Content:**
+
 - **Function declaration:** `function myFunction() { }`
 - **Parameters and return values**
 - **If/else statements:** Make decisions
@@ -54,9 +91,11 @@
 
 ---
 
-## Slide 6: Project 1 Demo
+## Slide 8: Project 1 Demo
+
 **Title:** 🧮 Personal Info Calculator
 **Content:**
+
 - **Time:** 5 minutes
 - **Concepts:** Variables, data types, basic operations
 - **What it does:**
@@ -67,9 +106,11 @@
 
 ---
 
-## Slide 7: Project 2 Demo
+## Slide 9: Project 2 Demo
+
 **Title:** 🎯 Simple Game Logic
 **Content:**
+
 - **Time:** 5 minutes
 - **Concepts:** Functions, conditionals, loops, arrays
 - **What it does:**
@@ -80,9 +121,11 @@
 
 ---
 
-## Slide 8: Key Teaching Points
+## Slide 10: Key Teaching Points
+
 **Title:** Important Concepts
 **Content:**
+
 - 🖥️ **Start with console.log()** - Show immediate feedback
 - 📝 **Use meaningful variable names** - Good practices from start
 - 🐛 **Demonstrate debugging** - Show how to find and fix errors
@@ -90,9 +133,11 @@
 
 ---
 
-## Slide 9: Common Mistakes
+## Slide 11: Common Mistakes
+
 **Title:** Watch Out For These!
 **Content:**
+
 - ❌ Forgetting semicolons (good practice)
 - ❌ Mixing up `=` (assignment) and `===` (comparison)
 - ❌ Variable scope confusion
@@ -101,9 +146,11 @@
 
 ---
 
-## Slide 10: Let's Code!
+## Slide 12: Let's Code!
+
 **Title:** Hands-On Time
 **Content:**
+
 - 👨‍💻 Open your browser developer tools (F12)
 - 🚀 Let's build the Personal Info Calculator
 - 🎯 Then create the Number Guessing Game
@@ -111,9 +158,11 @@
 
 ---
 
-## Slide 11: Wrap Up
+## Slide 13: Wrap Up
+
 **Title:** Great Job!
 **Content:**
+
 - ✅ You've learned JavaScript fundamentals
 - ✅ Variables, functions, loops, and logic
 - 🎯 **Next:** Bring these skills into the browser
