@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Contact Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <header>
+                <h1>📧 Contact Us</h1>
+                <p>We'd love to hear from you! Fill out the form below.</p>
+            </header>
+
+            <form id="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        required
+                        minlength="2"
+                        maxlength="50"
+                    >
+                    <div class="feedback" id="name-feedback"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        required
+                    >
+                    <div class="feedback" id="email-feedback"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        name="phone"
+                        placeholder="(555) 123-4567"
+                    >
+                    <div class="feedback" id="phone-feedback"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject *</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Choose a subject...</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="support">Technical Support</option>
+                        <option value="billing">Billing Question</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <div class="feedback" id="subject-feedback"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        rows="5" 
+                        required
+                        minlength="10"
+                        maxlength="500"
+                        placeholder="Tell us how we can help you..."
+                    ></textarea>
+                    <div class="char-counter">
+                        <span id="char-count">0</span>/500 characters
+                    </div>
+                    <div class="feedback" id="message-feedback"></div>
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <span class="checkmark"></span>
+                        Subscribe to our newsletter for updates
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <span class="checkmark"></span>
+                        I agree to the <a href="#" target="_blank">Terms of Service</a> *
+                    </label>
+                    <div class="feedback" id="terms-feedback"></div>
+                </div>
+
+                <button type="submit" id="submit-btn" disabled>
+                    <span class="btn-text">Send Message</span>
+                    <span class="btn-icon">📤</span>
+                </button>
+            </form>
+
+            <div id="success-message" class="success-message" style="display: none;">
+                <div class="success-icon">✅</div>
+                <h3>Message Sent Successfully!</h3>
+                <p>Thank you for contacting us. We'll get back to you soon.</p>
+                <button id="send-another" class="secondary-btn">Send Another Message</button>
+            </div>
+        </div>
+
+        <div class="validation-info">
+            <h3>🔍 Real-time Validation Demo</h3>
+            <div class="validation-status">
+                <div class="status-item">
+                    <span class="status-label">Form Valid:</span>
+                    <span id="form-valid-status" class="status-value">❌ No</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">Fields Completed:</span>
+                    <span id="fields-completed" class="status-value">0/5</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="validator.js"></script>
+</body>
+</html>
