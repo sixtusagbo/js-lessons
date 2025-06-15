@@ -1,8 +1,10 @@
 # Module 6: JavaScript for the Browser - Slides
 
 ## Slide 1: Welcome to Browser JavaScript
+
 **Title:** JavaScript for the Browser
 **Content:**
+
 - 🌐 Time to make websites interactive!
 - 🎯 Focus: User events, form handling, and timing
 - 🚀 From static pages to dynamic experiences
@@ -11,8 +13,10 @@
 ---
 
 ## Slide 2: What We'll Learn
+
 **Title:** Learning Objectives
 **Content:**
+
 - ✅ Handle user events (clicks, input, etc.)
 - ✅ Manipulate the DOM (Document Object Model)
 - ✅ Validate and process form data
@@ -22,8 +26,10 @@
 ---
 
 ## Slide 3: The DOM
+
 **Title:** Document Object Model
 **Content:**
+
 - 🌳 **DOM = Your webpage as a tree structure**
 - 📄 Every HTML element is a "node"
 - 🎯 JavaScript can find, change, add, or remove elements
@@ -33,8 +39,10 @@
 ---
 
 ## Slide 4: Event-Driven Programming
+
 **Title:** Responding to User Actions
 **Content:**
+
 - 👆 **Click events:** `element.addEventListener('click', function)`
 - ⌨️ **Input events:** User typing in forms
 - 📝 **Submit events:** Form submissions
@@ -43,9 +51,25 @@
 
 ---
 
-## Slide 5: Project 1 Demo
+## Slide 5: Arrow Functions
+
+**Title:** Modern Function Syntax
+**Content:**
+
+- **Traditional:** `function() { }`
+- **Arrow:** `() => { }`
+- **Advantages:** Shorter syntax, cleaner code
+- **Perfect for:** Event handlers and callbacks
+- **Key difference:** No own `this` binding
+- **Example:** `button.addEventListener('click', () => { })`
+
+---
+
+## Slide 6: Project 1 Demo
+
 **Title:** ✅ Interactive To-Do List
 **Content:**
+
 - **Time:** 8 minutes
 - **Concepts:** DOM manipulation, events, local storage
 - **Features:**
@@ -56,9 +80,11 @@
 
 ---
 
-## Slide 6: Local Storage
+## Slide 7: Local Storage
+
 **Title:** Remembering User Data
 **Content:**
+
 - 💾 **Browser can remember data between visits**
 - 🔄 `localStorage.setItem('key', 'value')`
 - 📖 `localStorage.getItem('key')`
@@ -67,9 +93,11 @@
 
 ---
 
-## Slide 7: Project 2 Demo
+## Slide 8: Project 2 Demo
+
 **Title:** 📧 Smart Contact Form
 **Content:**
+
 - **Time:** 7 minutes
 - **Concepts:** Form validation, real-time feedback
 - **Features:**
@@ -81,9 +109,11 @@
 
 ---
 
-## Slide 8: Form Validation
+## Slide 9: Form Validation
+
 **Title:** Helping Users Get It Right
 **Content:**
+
 - ✅ **Real-time feedback** - Check as they type
 - 🚫 **Prevent default** - Stop form submission if invalid
 - 📧 **Email patterns** - Use regular expressions
@@ -92,9 +122,11 @@
 
 ---
 
-## Slide 9: Browser Developer Tools
+## Slide 10: Browser Developer Tools
+
 **Title:** Your Debugging Toolkit
 **Content:**
+
 - 🔍 **Inspect elements** - See HTML structure
 - 🖥️ **Console** - View errors and logs
 - 🔧 **Breakpoints** - Pause code execution
@@ -103,9 +135,11 @@
 
 ---
 
-## Slide 10: Common Mistakes
+## Slide 11: Common Mistakes
+
 **Title:** Avoid These Pitfalls
 **Content:**
+
 - ❌ Forgetting to prevent default form submission
 - ❌ Not checking if elements exist before using them
 - ❌ Adding multiple event listeners to same element
@@ -114,9 +148,11 @@
 
 ---
 
-## Slide 11: Let's Build!
+## Slide 12: Let's Build!
+
 **Title:** Hands-On Development
 **Content:**
+
 - 🛠️ **First:** Interactive To-Do List
 - 📝 **Then:** Smart Contact Form
 - 👀 **Watch:** How changes appear instantly
@@ -125,9 +161,11 @@
 
 ---
 
-## Slide 12: User Experience Focus
+## Slide 13: User Experience Focus
+
 **Title:** Making It Feel Good
 **Content:**
+
 - ⚡ **Immediate feedback** - Users know what's happening
 - 🎨 **Visual cues** - Colors, animations, icons
 - 💾 **Save user work** - Don't lose their data
@@ -136,9 +174,11 @@
 
 ---
 
-## Slide 13: Wrap Up
+## Slide 14: Wrap Up
+
 **Title:** You're Getting Interactive!
 **Content:**
+
 - ✅ Pages now react to user input and events
 - ✅ Forms validate and provide feedback
 - ✅ Data persists between sessions

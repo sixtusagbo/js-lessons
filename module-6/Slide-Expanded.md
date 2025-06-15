@@ -105,7 +105,64 @@ button.addEventListener("click", () => {
 
 ---
 
-## Slide 5: Project 1 Demo
+## Slide 5: Arrow Functions
+
+**Title:** Modern Function Syntax
+
+**What to Say:**
+"Before we dive into our projects, let me introduce you to arrow functions - a modern JavaScript feature that will make your event handling code much cleaner and more readable.
+
+Traditional function syntax uses the `function` keyword, but arrow functions use a fat arrow (=>) instead. They're especially popular for event handlers and callbacks because they're more concise and often easier to read.
+
+Here's the key advantage: arrow functions are shorter and cleaner, especially for simple operations. Instead of writing `function() { console.log('clicked'); }`, you can write `() => console.log('clicked')`. For one-line functions, you don't even need the curly braces!
+
+But there's an important difference to understand: arrow functions don't have their own `this` binding. In traditional functions, `this` can change depending on how the function is called. Arrow functions inherit `this` from the surrounding context. For event handlers, this usually makes them more predictable and easier to work with.
+
+You'll see both syntaxes in real-world code, so it's important to recognize both. In our projects today, I'll show you both approaches so you can choose what feels more comfortable."
+
+**Live Demo:**
+
+```javascript
+const button = document.getElementById("my-button");
+
+// Traditional function syntax
+button.addEventListener("click", function () {
+  console.log("Button clicked with traditional function");
+});
+
+// Arrow function syntax - more concise
+button.addEventListener("click", () => {
+  console.log("Button clicked with arrow function");
+});
+
+// Even shorter for one-line functions
+button.addEventListener("click", () => console.log("One-liner!"));
+
+// With parameters
+const input = document.getElementById("my-input");
+input.addEventListener("input", (event) => {
+  console.log("User typed:", event.target.value);
+});
+
+// Multiple lines still need curly braces
+button.addEventListener("click", () => {
+  const message = "Hello from arrow function!";
+  console.log(message);
+  alert(message);
+});
+```
+
+**Key Points to Emphasize:**
+
+- Arrow functions are more concise for simple operations
+- Perfect for event handlers and callbacks
+- No own `this` binding (inherits from parent scope)
+- Both syntaxes are valid and widely used
+- Choose based on readability and team preferences
+
+---
+
+## Slide 6: Project 1 Demo
 
 **Title:** ✅ Interactive To-Do List
 
@@ -130,7 +187,7 @@ As we build this, pay attention to the user experience. We provide immediate fee
 
 ---
 
-## Slide 6: Local Storage
+## Slide 7: Local Storage
 
 **Title:** Remembering User Data
 
@@ -162,7 +219,7 @@ if (savedTasks) {
 
 ---
 
-## Slide 7: Project 2 Demo
+## Slide 8: Project 2 Demo
 
 **Title:** 📧 Smart Contact Form
 
@@ -187,7 +244,7 @@ Watch how we structure the validation logic. Each field has its own validation f
 
 ---
 
-## Slide 8: Form Validation
+## Slide 9: Form Validation
 
 **Title:** Helping Users Get It Right
 
@@ -223,7 +280,7 @@ emailInput.addEventListener("input", function () {
 
 ---
 
-## Slide 9: Browser Developer Tools
+## Slide 10: Browser Developer Tools
 
 **Title:** Your Debugging Toolkit
 
@@ -249,7 +306,7 @@ Don't be intimidated by all the options. Start with Elements and Console - those
 
 ---
 
-## Slide 10: Common Mistakes
+## Slide 11: Common Mistakes
 
 **Title:** Avoid These Pitfalls
 
@@ -275,7 +332,7 @@ The key to avoiding these mistakes is defensive programming - always assume thin
 
 ---
 
-## Slide 11: Let's Build!
+## Slide 12: Let's Build!
 
 **Title:** Hands-On Development
 
@@ -302,7 +359,7 @@ Remember, the goal isn't to memorize every line of code. It's to understand the 
 
 ---
 
-## Slide 12: User Experience Focus
+## Slide 13: User Experience Focus
 
 **Title:** Making It Feel Good
 
@@ -328,7 +385,7 @@ These principles apply whether you're building a simple contact form or a comple
 
 ---
 
-## Slide 13: Wrap Up
+## Slide 14: Wrap Up
 
 **Title:** You're Getting Interactive!
 
