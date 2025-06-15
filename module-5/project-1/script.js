@@ -1,67 +1,80 @@
 // Personal Info Calculator
 // This project demonstrates variables, data types, and basic operations
 
-console.log("🧮 Personal Info Calculator Starting...");
 
-// Variables and Data Types
-const firstName = "Alex";
-const lastName = "Johnson";
+console.log("Personal Info Calculator");
+
+// Variables
+const firstName = "Sixtus";
+const lastName = "Agbo";
 let age = 25;
 const birthYear = 1999;
-const currentYear = 2024;
+const currentYear = 2025;
 
-// Numbers and calculations
-const height = 175; // cm
-const weight = 70; // kg
+// Numbers
+const height = 175; // in cm
+const weight = 70; // in kg
 const isStudent = true;
 
-// Template literals (modern string formatting)
+// Template literals
 const fullName = `${firstName} ${lastName}`;
 console.log(`Hello! My name is ${fullName}`);
 
 // Age calculation
 const calculatedAge = currentYear - birthYear;
-console.log(`Born in ${birthYear}, so you are ${calculatedAge} years old`);
+console.log(`I was born in ${birthYear}, so I am ${calculatedAge} years old.`);
 
-// BMI calculation (Body Mass Index)
-const heightInMeters = height / 100;
+// BMI Calculation
+// What is BMI?
+// BMI - Body Mass Index
+// BMI = weight (kg) / height^2 (m^2)
+const heightInMeters = height / 100; // convert cm to meters
 const bmi = weight / (heightInMeters * heightInMeters);
-const roundedBMI = Math.round(bmi * 10) / 10; // Round to 1 decimal place
+// Order of operations
+// BODMAS - From Math class
+// In programming, we also have sth similar, it's called PEMDAS
+// P - Parentheses
+// E - Exponents
+// M - Multiplication
+// D - Division
+// A - Addition
+// S - Subtraction
+const roundedBMI = Math.round(bmi * 10) / 10; // Rounding to 1 decimal place
 
 console.log(`Height: ${height}cm, Weight: ${weight}kg`);
-console.log(`Your BMI is: ${roundedBMI}`);
+console.log(`My BMI is ${roundedBMI}`);
 
-// Arrays - storing multiple values
-const hobbies = ["reading", "coding", "gaming", "cooking"];
+// Arrays
+const hobbies = ["basketball", "coding", "gaming", "travelling", "cooking"];
 const numberOfHobbies = hobbies.length;
+console.log(hobbies[4]);
+console.log(hobbies[hobbies.length - 1]);
+console.log(`I have ${numberOfHobbies} hobbies.`);
+console.log(`Hobbies: ${hobbies.join(", ")}`);
 
-console.log(`You have ${numberOfHobbies} hobbies: ${hobbies.join(", ")}`);
-
-// Objects - storing related data together
+// Objects
 const person = {
     name: fullName,
     age: age,
     height: height,
     weight: weight,
     bmi: roundedBMI,
-    isStudent: isStudent,
-    hobbies: hobbies
+    hobbies: hobbies,
+    // Objects can contain functions
+    introduce: function () {
+        console.log(`Hello! My name is ${this.name}`);
+    },
+    // It can also contain other objects
+    address: {
+        street: "123 Main St",
+        city: "Lagos",
+        state: "Lagos",
+        zipCode: "10001",
+    },
 };
 
-console.log("Complete person info:", person);
-
-// Display results on the webpage
-const outputDiv = document.getElementById('output');
-outputDiv.innerHTML = `
-    <div class="output">
-        <h3>📊 Your Personal Info</h3>
-        <p><strong>Name:</strong> ${person.name}</p>
-        <p><strong>Age:</strong> ${person.age} years old</p>
-        <p><strong>BMI:</strong> ${person.bmi}</p>
-        <p><strong>Student:</strong> ${person.isStudent ? 'Yes' : 'No'}</p>
-        <p><strong>Hobbies:</strong> ${person.hobbies.join(', ')}</p>
-    </div>
-`;
-
-// Challenge for students: Try changing the values above and refresh the page!
-console.log("💡 Try changing the values at the top of script.js and refresh to see different results!");
+console.log('Complete person info: ', person);
+console.log("My age is: ", person.age);
+person.introduce();
+console.log(person.address);
+console.log(person.address.city);
