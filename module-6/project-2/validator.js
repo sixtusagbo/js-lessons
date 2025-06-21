@@ -1,8 +1,3 @@
-// Smart Contact Form with Real-time Validation
-// Demonstrates form handling, validation, and user feedback
-
-console.log("📧 Contact Form Validator Starting...");
-
 // DOM Elements
 const form = document.getElementById('contact-form');
 const submitBtn = document.getElementById('submit-btn');
@@ -43,52 +38,49 @@ const validationRules = {
     email: {
         required: true,
         pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-        message: "Please enter a valid email address"
+        message: "Please enter a valid email address",
     },
     phone: {
         required: false,
         pattern: /^[\+]?[1-9][\d]{0,15}$/,
-        message: "Please enter a valid phone number"
+        message: "Please enter a valid phone number",
     },
     subject: {
         required: true,
-        message: "Please select a subject"
+        message: "Please select a subject",
     },
     message: {
         required: true,
         minLength: 10,
         maxLength: 500,
         message: "Message should be between 10-500 characters"
-    },
-    terms: {
-        required: true,
-        message: "You must agree to the terms of service"
     }
 };
 
 // Validation functions
 function validateField(fieldName, value) {
     const rules = validationRules[fieldName];
-    if (!rules) return { isValid: true, message: "" };
+    if (!rules) return { isValid: true, message: '' };
 
     // Check if required field is empty
     if (rules.required && (!value || value.trim() === "")) {
+        // not valid
         return { isValid: false, message: `${fieldName} is required` };
     }
 
-    // If field is empty and not required, it's valid
-    if (!rules.required && (!value || value.trim() === "")) {
+    // If field is empty and not required, then it's valid
+    if (rules.required && (!value || value.trim() === "")) {
         return { isValid: true, message: "" };
     }
 
     // Check minimum length
     if (rules.minLength && value.length < rules.minLength) {
-        return { isValid: false, message: `Minimum ${rules.minLength} characters required` };
+        return { isValid: false, message: `Minimum of ${rules.minLength} characters required` };
     }
 
     // Check maximum length
     if (rules.maxLength && value.length > rules.maxLength) {
-        return { isValid: false, message: `Maximum ${rules.maxLength} characters allowed` };
+        return { isValid: false, message: `Maximum of ${rules.maxLength} characters allowed` };
     }
 
     // Check pattern
@@ -96,17 +88,20 @@ function validateField(fieldName, value) {
         return { isValid: false, message: rules.message };
     }
 
-    return { isValid: true, message: "✓ Looks good!" };
+    return { isValid: true, message: "✅ Looks good!" };
 }
 
-// Special validation for checkbox
+// Special validation func for checkbox
 function validateCheckbox(fieldName, isChecked) {
     const rules = validationRules[fieldName];
+
     if (rules && rules.required && !isChecked) {
         return { isValid: false, message: rules.message };
     }
+
     return { isValid: true, message: "" };
 }
+
 
 // Update field feedback
 function updateFieldFeedback(field, feedbackElement, validation) {
@@ -123,17 +118,18 @@ function updateFieldFeedback(field, feedbackElement, validation) {
     }
 }
 
+
 // Update character counter for message field
 function updateCharCounter() {
     const count = messageField.value.length;
     charCount.textContent = count;
-    
+
     if (count > 450) {
         charCount.style.color = '#dc3545';
     } else if (count > 400) {
         charCount.style.color = '#ffc107';
     } else {
-        charCount.style.color = '#666';
+        charCount.style.color = '#666666';
     }
 }
 
@@ -147,27 +143,27 @@ function checkFormValidity() {
     const termsValid = validateCheckbox('terms', termsField.checked).isValid;
 
     const allValid = nameValid && emailValid && phoneValid && subjectValid && messageValid && termsValid;
-    
+
     // Count completed required fields
     const requiredFields = [nameField.value, emailField.value, subjectField.value, messageField.value];
     const completedFields = requiredFields.filter(field => field.trim() !== "").length + (termsField.checked ? 1 : 0);
-    
+
     // Update status display
     formValidStatus.textContent = allValid ? "✅ Yes" : "❌ No";
     formValidStatus.style.color = allValid ? "#28a745" : "#dc3545";
     fieldsCompleted.textContent = `${completedFields}/5`;
-    
-    // Enable/disable submit button
+
+    // Enable/Disable submit button
     submitBtn.disabled = !allValid;
-    
-    console.log(`Form validity: ${allValid}, Completed fields: ${completedFields}/5`);
-    
+
+    console.log(`Form validiity: ${allValid}, Completed fields: ${completedFields}/5`);
+
     return allValid;
 }
 
 // Event listeners for real-time validation
-nameField.addEventListener('input', (e) => {
-    const validation = validateField('name', e.target.value);
+nameField.addEventListener('input', (event) => {
+    const validation = validateField('name', event.target.value);
     updateFieldFeedback(nameField, nameFeedback, validation);
     checkFormValidity();
 });
@@ -206,9 +202,9 @@ termsField.addEventListener('change', (e) => {
 // Form submission
 form.addEventListener('submit', (e) => {
     e.preventDefault(); // Prevent default form submission
-    
-    console.log("📤 Form submitted!");
-    
+
+    console.log("Form submitted");
+
     // Collect form data
     const formData = {
         name: nameField.value,
@@ -218,59 +214,47 @@ form.addEventListener('submit', (e) => {
         message: messageField.value,
         newsletter: newsletterField.checked,
         terms: termsField.checked,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
     };
-    
+
     console.log("Form data:", formData);
-    
+
     // Simulate form submission
-    submitBtn.textContent = "Sending...";
+    submitBtn.textContent = 'Sending...';
     submitBtn.disabled = true;
-    
+
+    // Show a message to the user
     setTimeout(() => {
-        // Hide form and show success message
         form.style.display = 'none';
         successMessage.style.display = 'block';
-        
-        console.log("✅ Form submitted successfully!");
+
+        console.log('Form submitted successfully!');
     }, 1500);
 });
 
 // Send another message button
 sendAnotherBtn.addEventListener('click', () => {
-    // Reset form
     form.reset();
     form.style.display = 'block';
     successMessage.style.display = 'none';
-    
+
     // Clear all validation classes and feedback
     [nameField, emailField, phoneField, subjectField, messageField, termsField].forEach(field => {
         field.classList.remove('valid', 'invalid');
     });
-    
+
     [nameFeedback, emailFeedback, phoneFeedback, subjectFeedback, messageFeedback, termsFeedback].forEach(feedback => {
         feedback.textContent = '';
         feedback.className = 'feedback';
     });
-    
+
     // Reset submit button
     submitBtn.innerHTML = '<span class="btn-text">Send Message</span><span class="btn-icon">📤</span>';
     submitBtn.disabled = true;
-    
+
     // Reset counters
     updateCharCounter();
     checkFormValidity();
-    
-    console.log("🔄 Form reset for new message");
+
+    console.log('Our form has been reset for another message successfully!');
 });
-
-// Initialize the form
-function initForm() {
-    console.log("🚀 Initializing contact form...");
-    updateCharCounter();
-    checkFormValidity();
-    nameField.focus();
-}
-
-// Start the form when DOM is loaded
-document.addEventListener('DOMContentLoaded', initForm);
