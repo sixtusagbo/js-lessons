@@ -337,32 +337,7 @@ Don't worry if these seem confusing now. We'll encounter each of these as we cod
 
 ---
 
-## Slide 12: Let's Code!
-
-**Title:** Hands-On Time
-
-**What to Say:**
-"Alright, enough theory - let's get our hands dirty! This is where the real learning happens. I want everyone to open their browser and press F12 to open the developer tools. Don't worry if it looks intimidating - we're just going to use the console tab.
-
-The console is like a playground for JavaScript. You can type code directly and see results immediately. It's perfect for experimenting and learning. Think of it as a conversation with the computer - you say something in JavaScript, and it responds.
-
-We're going to start by building the Personal Info Calculator together. I'll type the code, explain what each line does, and you follow along. Don't just copy - try to understand why we're writing each piece.
-
-After that, we'll tackle the Number Guessing Game. This one's more complex, but by then you'll have the fundamentals down. I encourage you to ask questions as we go. If something doesn't make sense, speak up - chances are others have the same question.
-
-Remember, programming is not about memorizing syntax. It's about understanding concepts and solving problems. The syntax will come naturally with practice."
-
-**Hands-On Instructions:**
-
-1. Open browser developer tools (F12)
-2. Navigate to Console tab
-3. Start with simple examples: `console.log("Hello World!")`
-4. Build up to the full projects
-5. Encourage experimentation and questions
-
----
-
-## Slide 13: Wrap Up
+## Slide 12: Wrap Up
 
 **Title:** Great Job!
 

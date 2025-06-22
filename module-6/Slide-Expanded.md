@@ -332,34 +332,7 @@ The key to avoiding these mistakes is defensive programming - always assume thin
 
 ---
 
-## Slide 12: Let's Build!
-
-**Title:** Hands-On Development
-
-**What to Say:**
-"Time to build! We're going to create both projects together, and I want you to follow along actively. Don't just watch - type the code, experiment with changes, break things and fix them.
-
-We'll start with the Interactive To-Do List. This project will show you the complete cycle of user interaction - from capturing input to storing data to updating the display. Pay attention to how we structure the code and handle different types of events.
-
-Then we'll build the Smart Contact Form. This one focuses on validation and user experience. Notice how we provide immediate feedback and guide users toward success.
-
-As we code, I'll intentionally make some mistakes to show you the debugging process. Programming isn't about writing perfect code the first time - it's about writing code, testing it, finding problems, and fixing them.
-
-Feel free to ask questions at any point. If something doesn't make sense, speak up. Programming is a collaborative activity, and explaining concepts helps everyone learn better.
-
-Remember, the goal isn't to memorize every line of code. It's to understand the patterns and principles so you can apply them to your own projects."
-
-**Hands-On Structure:**
-
-1. Start with simple DOM selection and manipulation
-2. Add event listeners step by step
-3. Build up the complete functionality gradually
-4. Test and debug together
-5. Encourage experimentation and questions
-
----
-
-## Slide 13: User Experience Focus
+## Slide 12: User Experience Focus
 
 **Title:** Making It Feel Good
 
