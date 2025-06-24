@@ -285,7 +285,7 @@ emailInput.addEventListener("input", function () {
 **Title:** Your Debugging Toolkit
 
 **What to Say:**
-"The browser developer tools are like X-ray vision for web developers. They let you see inside web pages, understand how they work, and debug problems. Every professional web developer uses these tools daily.
+"The browser developer tools are like X-ray vision for web developers. They let you see inside web pages, understand how they work, and debug problems. Almost every professional web developer uses these tools daily.
 
 The Elements tab shows you the live DOM structure. You can click on any element and see its HTML, CSS, and JavaScript properties. You can even edit things live and see changes immediately. It's like being able to peek behind the curtain of any website.
 
@@ -295,7 +295,7 @@ The Network tab shows all the requests your page makes - images, stylesheets, AP
 
 Here's a pro tip: you can set breakpoints in your JavaScript code. A breakpoint pauses execution at a specific line, letting you examine variables and step through code line by line. It's like being able to freeze time and examine everything in slow motion.
 
-Don't be intimidated by all the options. Start with Elements and Console - those two tabs will solve 90% of your debugging needs."
+Don't be intimidated by all the options. Start with Elements and Console - those two tabs will solve 70% of your debugging needs."
 
 **Live Demo:**
 
