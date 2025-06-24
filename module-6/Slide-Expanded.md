@@ -358,7 +358,7 @@ These principles apply whether you're building a simple contact form or a comple
 
 ---
 
-## Slide 14: Wrap Up
+## Slide 13: Wrap Up
 
 **Title:** You're Getting Interactive!
 
