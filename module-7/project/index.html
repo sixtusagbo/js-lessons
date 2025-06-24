@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Blog Reader</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 Simple Blog Reader</h1>
+            <p>Fetching real data from JSONPlaceholder API</p>
+        </header>
+
+        <!-- Loading State -->
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Loading posts...</p>
+        </div>
+
+        <!-- Error State -->
+        <div id="error" class="error" style="display: none;">
+            <div class="error-icon">❌</div>
+            <h3>Oops! Something went wrong</h3>
+            <p id="error-message">Please try again</p>
+            <button id="retry-btn" class="retry-btn">Try Again</button>
+        </div>
+
+        <!-- Posts Display -->
+        <div id="posts-container" class="posts-container">
+            <!-- Posts will be dynamically added here -->
+        </div>
+
+        <!-- Controls -->
+        <div class="controls">
+            <button id="load-posts-btn" class="primary-btn">
+                Load Blog Posts
+            </button>
+            <button id="clear-posts-btn" class="secondary-btn" style="display: none;">
+                Clear Posts
+            </button>
+        </div>
+
+        <!-- API Info -->
+        <div class="api-info">
+            <h3>🔧 What This Demonstrates</h3>
+            <div class="feature-list">
+                <div class="feature">
+                    <span class="feature-icon">🌐</span>
+                    <span>Real API calls to JSONPlaceholder</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">⚡</span>
+                    <span>Async/await for clean code</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">🔄</span>
+                    <span>Loading states and error handling</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">📊</span>
+                    <span>JSON data parsing and display</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

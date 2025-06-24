@@ -189,29 +189,30 @@ async function getUserPosts() {
 
 ---
 
-## Slide 7: Project 1 Demo
+## Slide 9: Project Demo
 
-**Title:** 🌤️ Weather App
+**Title:** 📝 Simple Blog Reader
 
 **What to Say:**
-"Our first project is a weather application that demonstrates all the concepts we've discussed. This isn't just a technical exercise - it's the kind of app people actually use every day.
+"Now let's build a real application that fetches data from a live API. We're going to create a Simple Blog Reader using JSONPlaceholder - a free, real REST API that's perfect for learning and testing.
 
-Here's what makes this project special: it shows the complete lifecycle of API integration. We make a request to a weather service, handle the response, parse the JSON data, and display it in a beautiful, user-friendly interface.
+What makes this project special is that it's completely real - no mock data, no simulations. We're making actual HTTP requests to a real server and getting back real JSON data. This is exactly how modern web applications work.
 
-We'll implement proper loading states - users see a spinner while we fetch data. We'll handle errors gracefully - if the API is down or the city isn't found, users get helpful feedback, not cryptic error messages.
+JSONPlaceholder provides fake blog posts, users, and comments that look realistic but are safe to experiment with. It's maintained by the developer community specifically for learning and prototyping.
 
-The app demonstrates data transformation - taking raw API data and converting it into something meaningful for users. Weather APIs return lots of technical data; we'll extract what matters and present it clearly.
+Our blog reader will demonstrate the complete API workflow: make a request, handle loading states, parse JSON data, display it beautifully, and handle any errors that might occur. You'll see every step of the process.
 
-For this demo, we're using mock data to simulate API responses. This is actually a common development practice - you build your interface and logic first, then connect to real APIs later. It lets you develop without depending on external services.
+Watch how we structure the code to be professional and maintainable. We'll have separate functions for fetching data, displaying posts, handling errors, and managing UI states. This is how real applications are built.
 
-Watch how we structure the code to separate concerns - functions for making API calls, functions for updating the UI, functions for handling errors. This modular approach makes the code maintainable and testable."
+The best part? When you're done, you'll have built something that actually works with real data. You can modify it, extend it, and use the same patterns for any API you want to work with."
 
 **Key Learning Points:**
 
-- Complete API integration workflow
-- Loading states and error handling
-- Data transformation and presentation
-- Code organization for maintainability
+- Real API integration with JSONPlaceholder
+- Complete fetch-to-display workflow
+- Professional error handling and loading states
+- Clean, maintainable code structure
+- Practical skills for any API integration
 
 ---
 
@@ -307,35 +308,7 @@ When working with APIs, you'll spend a lot of time exploring JSON responses. Use
 
 ---
 
-## Slide 10: Project 2 Demo
-
-**Title:** ✨ Random Quote Generator
-
-**What to Say:**
-"Our second project is a quote generator that showcases advanced API concepts. This project demonstrates working with multiple data sources, implementing user preferences, and creating a polished user experience.
-
-What makes this project interesting is the feature richness. Users can browse quotes by category, save favorites to local storage, copy quotes to clipboard, and share on social media. Each feature demonstrates different aspects of modern web development.
-
-The quote generator shows how to work with different types of API responses. Some APIs return single objects, others return arrays. Some require authentication, others are open. We'll handle various response formats and extract the data we need.
-
-Local storage integration shows how to combine API data with persistent user preferences. The favorites feature demonstrates how to create a personalized experience that survives browser sessions.
-
-The social sharing features show how to integrate with external platforms. We'll generate Twitter share URLs and implement clipboard functionality using modern browser APIs.
-
-This project is a great example of progressive enhancement - it works at a basic level immediately, but offers rich features for users who want them."
-
-**Key Features to Highlight:**
-
-- Multiple API endpoints and data sources
-- Category-based filtering
-- Local storage for user preferences
-- Social media integration
-- Clipboard API usage
-- Progressive enhancement approach
-
----
-
-## Slide 11: Error Handling Best Practices
+## Slide 10: Error Handling Best Practices
 
 **Title:** When Things Go Wrong
 
@@ -398,91 +371,35 @@ async function robustApiCall() {
 
 ---
 
-## Slide 12: Security Considerations
+## Slide 11: Let's Build!
 
-**Title:** Staying Safe
-
-**What to Say:**
-"Security in API development isn't just about preventing attacks - it's about building trust with your users and protecting their data. Let me share the key principles you need to know.
-
-Never expose API keys in client-side code. API keys are like passwords for services. If you put them in your JavaScript, anyone can view your source code and steal them. For client-side applications, use APIs that don't require keys, or use a backend server to proxy requests.
-
-CORS - Cross-Origin Resource Sharing - is a browser security feature that prevents websites from making requests to different domains without permission. If you're getting CORS errors, it means the API server hasn't given your domain permission to access it. This is a security feature, not a bug.
-
-Always validate data from external sources. Just because an API is supposed to return certain data doesn't mean it always will. Malicious actors might try to send unexpected data to break your application. Validate structure, types, and ranges.
-
-Use HTTPS for all API calls. HTTP traffic can be intercepted and read by anyone on the network. HTTPS encrypts the communication, protecting sensitive data in transit.
-
-Be mindful of rate limiting. APIs often limit how many requests you can make per minute or hour. Respect these limits - they protect the service from being overwhelmed and ensure fair access for all users."
-
-**Security Checklist:**
-
-- Never expose API keys in client code
-- Always use HTTPS for API calls
-- Validate all data from external sources
-- Respect rate limits and API terms of service
-- Handle CORS properly (don't try to bypass it)
-- Sanitize data before displaying to users
-
----
-
-## Slide 13: Real-World Examples
-
-**Title:** APIs Everywhere
+**Title:** Creating a Data-Driven App
 
 **What to Say:**
-"Let me show you how pervasive APIs are in the applications you use every day. Understanding this will help you see the possibilities for your own projects.
+"Time to put everything together! We're going to build our Simple Blog Reader step by step, and I want you to see the complete development process - from planning to implementation to testing.
 
-Weather apps like the one we built use services like OpenWeatherMap or AccuWeather. These APIs provide current conditions, forecasts, radar data, and alerts for locations worldwide. The same data powers weather widgets on news sites, travel apps, and smart home devices.
+We'll start by setting up the basic structure, then implement the API call to JSONPlaceholder. I'll show you how to handle the response, parse the JSON data, and display it in a clean, user-friendly interface.
 
-Social media platforms have extensive APIs. Twitter's API lets you post tweets, read timelines, and analyze trends. Instagram's API provides access to photos and user data. These APIs power social media management tools, analytics platforms, and content aggregation services.
-
-Financial applications use APIs for stock prices, currency exchange rates, and market data. Services like Alpha Vantage and Yahoo Finance provide real-time and historical financial data. This powers trading apps, portfolio trackers, and financial news sites.
-
-Maps and location services rely heavily on APIs. Google Maps API provides mapping, directions, and place information. Uber and Lyft use location APIs to track drivers and passengers. Food delivery apps use mapping APIs to calculate delivery routes.
-
-The key insight is that APIs enable specialization. Instead of every company building their own weather service, mapping system, or payment processor, they can focus on their core business and integrate with specialized services through APIs."
-
-**API Categories to Explore:**
-
-- Weather and environmental data
-- Social media and communication
-- Financial and market data
-- Maps and location services
-- News and content aggregation
-- E-commerce and payments
-
----
-
-## Slide 14: Let's Build!
-
-**Title:** Creating Data-Driven Apps
-
-**What to Say:**
-"Time to put everything together! We're going to build both projects step by step, and I want you to see the complete development process - from planning to implementation to testing.
-
-We'll start with the Weather App. I'll show you how to structure the code, implement the API calls, handle different response scenarios, and create a polished user interface. Pay attention to how we separate concerns - data fetching, UI updates, and error handling each have their own functions.
-
-Then we'll build the Quote Generator. This project demonstrates more advanced concepts like working with multiple data sources, implementing user preferences, and creating rich interactions. Notice how we build features incrementally - start with basic functionality, then add enhancements.
+Pay attention to how we structure the code to be professional and maintainable. We'll have separate functions for fetching data, displaying posts, handling errors, and managing UI states. This separation of concerns makes the code easier to understand, test, and modify.
 
 As we code, I'll show you the browser's Network tab so you can see the actual HTTP requests being made. This is invaluable for debugging API issues and understanding how data flows through your application.
 
-I'll also demonstrate common debugging techniques - using console.log to trace execution, examining API responses, and testing error conditions. These skills are just as important as writing the initial code.
+We'll also implement proper error handling and loading states. Users should always know what's happening - whether data is loading, if something went wrong, or when everything is working perfectly.
 
-Remember, professional development is iterative. We'll start with a basic version, test it, then add features and improvements. This approach helps you build confidence and catch problems early."
+The best part? When we're done, you'll have built something that actually works with real data. You can modify it, extend it, and use the same patterns for any API you want to work with."
 
 **Development Process:**
 
-1. Plan the application structure
-2. Implement basic API integration
-3. Add error handling and loading states
-4. Enhance the user interface
+1. Set up the basic HTML structure
+2. Implement the fetch API call
+3. Add loading states and error handling
+4. Parse and display JSON data
 5. Test different scenarios
-6. Add advanced features incrementally
+6. Polish the user interface
 
 ---
 
-## Slide 15: Course Complete!
+## Slide 12: Course Complete!
 
 **Title:** You Did It! 🎉
 
@@ -493,11 +410,11 @@ You started with JavaScript fundamentals - variables, functions, and control flo
 
 Then you moved into browser programming - making web pages interactive, handling user events, and creating dynamic user interfaces. You learned that programming isn't just about making things work; it's about creating experiences that feel intuitive and helpful.
 
-Finally, you've mastered API integration and asynchronous programming. You can now build applications that connect to the wider world, fetch real-time data, and create truly dynamic experiences. This is the skill that transforms static websites into powerful web applications.
+Finally, you've mastered API integration and asynchronous programming. You can now build applications that connect to the wider world, fetch real-time data, and create truly dynamic experiences. You built a real blog reader that fetches actual data from a live API!
 
 But more than the technical skills, you've developed a programmer's mindset. You understand how to break down complex problems, debug issues systematically, and build applications that handle real-world complexity gracefully.
 
-The web is your playground now. You have the skills to build weather apps, social media tools, data dashboards, interactive games, and countless other applications. The only limit is your imagination.
+The web is your playground now. You have the skills to build data-driven applications, interactive tools, and dynamic websites. The only limit is your imagination.
 
 Keep practicing, keep building, and keep learning. The JavaScript ecosystem is vast and constantly evolving, but you now have the foundation to grow with it. Welcome to the community of web developers!"
 
