@@ -127,22 +127,6 @@ async function getData() {
 
 ---
 
-## Slide 9: Project Demo
-
-**Title:** 📝 Simple Blog Reader
-**Content:**
-
-- **Time:** 10 minutes
-- **API:** JSONPlaceholder (real, free API)
-- **Features:**
-  - Fetch and display blog posts
-  - Loading states and error handling
-  - Clean, responsive design
-  - Real API integration
-- **Goal:** Complete API workflow from request to display
-
----
-
 ## Slide 10: Error Handling Best Practices
 
 **Title:** When Things Go Wrong
@@ -154,19 +138,6 @@ async function getData() {
 - 💡 **Always have a fallback plan**
 - 🎯 **Show helpful error messages**
 - 🔄 **Provide retry options**
-
----
-
-## Slide 11: Let's Build!
-
-**Title:** Creating a Data-Driven App
-**Content:**
-
-- 📝 **Build:** Simple Blog Reader with JSONPlaceholder
-- 👀 **Watch:** Network tab in developer tools
-- 🔧 **Practice:** Error handling and loading states
-- 💬 **Learn:** Real API integration workflow
-- 🎯 **Goal:** Complete fetch-to-display cycle
 
 ---
 

@@ -189,33 +189,6 @@ async function getUserPosts() {
 
 ---
 
-## Slide 9: Project Demo
-
-**Title:** 📝 Simple Blog Reader
-
-**What to Say:**
-"Now let's build a real application that fetches data from a live API. We're going to create a Simple Blog Reader using JSONPlaceholder - a free, real REST API that's perfect for learning and testing.
-
-What makes this project special is that it's completely real - no mock data, no simulations. We're making actual HTTP requests to a real server and getting back real JSON data. This is exactly how modern web applications work.
-
-JSONPlaceholder provides fake blog posts, users, and comments that look realistic but are safe to experiment with. It's maintained by the developer community specifically for learning and prototyping.
-
-Our blog reader will demonstrate the complete API workflow: make a request, handle loading states, parse JSON data, display it beautifully, and handle any errors that might occur. You'll see every step of the process.
-
-Watch how we structure the code to be professional and maintainable. We'll have separate functions for fetching data, displaying posts, handling errors, and managing UI states. This is how real applications are built.
-
-The best part? When you're done, you'll have built something that actually works with real data. You can modify it, extend it, and use the same patterns for any API you want to work with."
-
-**Key Learning Points:**
-
-- Real API integration with JSONPlaceholder
-- Complete fetch-to-display workflow
-- Professional error handling and loading states
-- Clean, maintainable code structure
-- Practical skills for any API integration
-
----
-
 ## Slide 8: Handling Asynchronous Operations
 
 **Title:** Dealing with "Wait Time"
@@ -368,34 +341,6 @@ async function robustApiCall() {
   }
 }
 ```
-
----
-
-## Slide 11: Let's Build!
-
-**Title:** Creating a Data-Driven App
-
-**What to Say:**
-"Time to put everything together! We're going to build our Simple Blog Reader step by step, and I want you to see the complete development process - from planning to implementation to testing.
-
-We'll start by setting up the basic structure, then implement the API call to JSONPlaceholder. I'll show you how to handle the response, parse the JSON data, and display it in a clean, user-friendly interface.
-
-Pay attention to how we structure the code to be professional and maintainable. We'll have separate functions for fetching data, displaying posts, handling errors, and managing UI states. This separation of concerns makes the code easier to understand, test, and modify.
-
-As we code, I'll show you the browser's Network tab so you can see the actual HTTP requests being made. This is invaluable for debugging API issues and understanding how data flows through your application.
-
-We'll also implement proper error handling and loading states. Users should always know what's happening - whether data is loading, if something went wrong, or when everything is working perfectly.
-
-The best part? When we're done, you'll have built something that actually works with real data. You can modify it, extend it, and use the same patterns for any API you want to work with."
-
-**Development Process:**
-
-1. Set up the basic HTML structure
-2. Implement the fetch API call
-3. Add loading states and error handling
-4. Parse and display JSON data
-5. Test different scenarios
-6. Polish the user interface
 
 ---
 
